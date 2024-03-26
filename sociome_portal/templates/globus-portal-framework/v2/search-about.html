@@ -1,0 +1,54 @@
+{% extends "globus-portal-framework/v2/search-base.html" %}
+{% load is_active index_template is_active %}
+
+{% block breadcrumb_items %}
+{{block.super}}
+<li class="breadcrumb-item {% is_active request 'search-about' index=globus_portal_framework.index %}">
+  <a class="h5">{{project_info.title}} About</a>
+</li>
+{% endblock %}
+
+{% block body %}
+
+<div class="row">
+  <div class="col">
+    <h2 class="text-center mt-3 mb-5">{{globus_portal_framework.project_title}}</h2>
+  </div>
+</div>
+
+
+<div class="row mb-5">
+  <div class="col"></div>
+  <div class="col-10">
+
+    <div>
+      <h2>About</h2>
+      {% block landing_page_about %}
+      <h3>What's the Sociome?</h3>
+      <div class="fs-6">
+        The “sociome” encompasses all the environments where people are born, live, learn, work, play, worship, and age
+        that impact people’s health
+        There are parts of our lives that impact how healthy we are that don’t have to do with a medical chart – things
+        like where we live, how we think and act, how much money we have, our exposure to sunshine, noise, violence, and
+        more. The Sociome Data Commons is a breakthrough tool for scientists to analyze a lot of information to learn
+        what makes us healthy or sick – and the datasets even include hyperlocal information, like neighborhoods, that
+        other tools haven’t been able to capture.
+      </div>
+      {% endblock %}
+    </div>
+    <!-- <div>
+      <h1>Data Access</h1>
+      {% block landing_page_data_access %}
+      <p class="lead font-weight-bolder">Search results are limited to members of the
+        {{globus_portal_framework.project_title}} Group.</p>
+      <a class="btn btn-primary" target="_blank"
+        href="https://app.globus.org/groups/{{globus_portal_framework.index_data.group}}/about">
+        Request Access to {{globus_portal_framework.project_title}} Group
+      </a>
+      {% endblock %}
+    </div> -->
+  </div>
+  <div class="col"></div>
+</div>
+
+{% endblock %}

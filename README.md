@@ -10,7 +10,7 @@ To setup a local development environment:
 * change directories using `cd sociome_portal`
 * activate the vertual environment using `source bin/activate`
 * install the dependencies using `pip install django-globus-portal-framework`
-* Go to the Globus Developer Site and retrieve client is and client secrets
+* Go to the Globus Developer Site and retrieve client ID and client secrets
 * Make sure `http://localhost:8000/complete/globus/` is added to the redirect`
 * create settings/local.py with `SOCIAL_AUTH_GLOBUS_KEY` and `SOCIAL_AUTH_GLOBUS_SECRET` from Globus Developer site
   ```

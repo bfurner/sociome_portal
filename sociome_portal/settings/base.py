@@ -1,5 +1,5 @@
 from pathlib import Path
-from itmdatacommons import fields
+from sociome_portal import fields
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -51,7 +51,7 @@ AUTHENTICATION_BACKENDS = [
     'globus_portal_framework.auth.GlobusOpenIdConnect',
     'django.contrib.auth.backends.ModelBackend',
 ]
-ROOT_URLCONF = 'itmdatacommons.urls'
+ROOT_URLCONF = 'sociome_portal.urls'
 
 TEMPLATES = [
     {
@@ -75,7 +75,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'itmdatacommons.wsgi.application'
+WSGI_APPLICATION = 'sociome_portal.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases

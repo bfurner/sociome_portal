@@ -1,5 +1,6 @@
 {% extends "globus-portal-framework/v2/search-base.html" %}
 {% load is_active index_template is_active %}
+{% load static %}
 
 {% block breadcrumb_items %}
 {{block.super}}
@@ -25,6 +26,8 @@
       {% block landing_page_about %}
       <h3>What is the ITM Data Commons?</h3>
       <div class="fs-6">
+        <img class="rounded float-right" src="{% static 'custom/images/ITMDC_Connected.jpg' %}"
+          alt="ITM Data Commons" width="225px" />
         The ITM Data Commons is a collection of datasets that are complementary to the biological and clinical data
         usually used in biomedical research. These data mostly come from federal, publicly available sources. Examples
         of variables in these datasets include: population size, employment and income, crime/safety, community
@@ -47,9 +50,11 @@
                 discussion about acceptable use, and to assess the fit of their research question(s).</li>
               <li>After completing the interest form, potential users may complete the following steps:
                 <ul>
-                  <li>Sign <a href="https://redcap.uchicago.edu/surveys/?s=PWTEP4KKMAHTT3PY">data use agreement (DUA) in REDCap</a>. 
+                  <li>Sign <a href="https://redcap.uchicago.edu/surveys/?s=PWTEP4KKMAHTT3PY">data use agreement (DUA) in
+                      REDCap</a>.
                     ITM Data Commons leadership will receive an automated email when this form has been signed.</li>
-                  <li>Log in to Globus (<a href="https://www.globus.org/">https://www.globus.org/</a>) or create an account and request to join the ITM Data
+                  <li>Log in to Globus (<a href="https://www.globus.org/">https://www.globus.org/</a>) or create an
+                    account and request to join the ITM Data
                     Commons group.</li>
                 </ul>
               </li>
@@ -67,7 +72,8 @@
               <li>To get specific help with Globus, use the Globus help desk here: <a
                   href="https://support.globus.org/hc/en-us/requests/new?_gl=1*dz1gv9*_ga*MTIwNjA3OTY5NS4xNzQ1MjY2NTEx*_ga_7ZB89HGG0P*czE3NDczNDI3MDAkbzE0JGcxJHQxNzQ3MzQyNzIyJGowJGwwJGgw">Globus
                   help</a></li>
-              <li>For general ITM Data Commons help, contact Program Director Kat Bouzein at <a href="mailto:kblumhardt@uchicago.edu">kblumhardt@uchicago.edu</a>.
+              <li>For general ITM Data Commons help, contact Program Director Kat Bouzein at <a
+                  href="mailto:kblumhardt@uchicago.edu">kblumhardt@uchicago.edu</a>.
               </li>
             </ol>
           </li>
@@ -75,41 +81,45 @@
       </div>
       <br /><br />
       <h3>ITM Data Commons team</h3>
-      <table class="table table-striped">
-        <tr>
-          <td>Sam Volchenboum</td>
-          <td>ITM Informatics Director</td>
-        </tr>
-        <tr>
-          <td>Suzi Birz</td>
-          <td>ITM Informatics Co-Director</td>
-        </tr>
-        <tr>
-          <td>Kat Bouzein</td>
-          <td>ITM Program Director</td>
-        </tr>
-        <tr>
-          <td>Kritika Prakesh</td>
-          <td>ITM Data Commons Analyst</td>
-        </tr>
-        <tr>
-          <td>Julie Johnson</td>
-          <td>UChicago Institutional Informatics Lead</td>
-        </tr>
-        <tr>
-          <td>Ron Price</td>
-          <td>Loyola Institutional Informatics Lead</td>
-        </tr>
-        <tr>
-          <td>Carlos Santos</td>
-          <td>Rush Institutional Informatics Lead</td>
-        </tr>
-        <tr>
-          <td>Tony Solomonides</td>
-          <td>Endeavor Institutional Informatics Lead</td>
-        </tr>
-      </table>  
-
+      <div>
+        <table class="table table-striped">
+          <tr>
+            <td>Sam Volchenboum</td>
+            <td>ITM Informatics Director</td>
+          </tr>
+          <tr>
+            <td>Suzi Birz</td>
+            <td>ITM Informatics Co-Director</td>
+          </tr>
+          <tr>
+            <td>Kat Bouzein</td>
+            <td>ITM Program Director</td>
+          </tr>
+          <tr>
+            <td>Kritika Prakesh</td>
+            <td>ITM Data Commons Analyst</td>
+          </tr>
+          <tr>
+            <td>Julie Johnson</td>
+            <td>UChicago Institutional Informatics Lead</td>
+          </tr>
+          <tr>
+            <td>Ron Price</td>
+            <td>Loyola Institutional Informatics Lead</td>
+          </tr>
+          <tr>
+            <td>Carlos Santos</td>
+            <td>Rush Institutional Informatics Lead</td>
+          </tr>
+          <tr>
+            <td>Tony Solomonides</td>
+            <td>Endeavor Institutional Informatics Lead</td>
+          </tr>
+        </table>
+      </div>
+      <div class="mx-auto" style="width: 520px;">
+        <img src="{% static 'custom/images/ITM_Footer.png' %}" alt="ITM Data Commons" />
+      </div>
       {% endblock %}
     </div>
     <!-- <div>

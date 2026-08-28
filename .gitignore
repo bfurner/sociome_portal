@@ -7,7 +7,7 @@
 *.pyc
 __pycache__/
 local_settings.py
-sociome_portal/db.sqlite3
+itmdatacommons/db.sqlite3
 db.sqlite3-journal
 media
 

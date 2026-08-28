@@ -1,5 +1,5 @@
 from pathlib import Path
-from sociome_portal import fields
+from itmdatacommons import fields
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -51,7 +51,7 @@ AUTHENTICATION_BACKENDS = [
     'globus_portal_framework.auth.GlobusOpenIdConnect',
     'django.contrib.auth.backends.ModelBackend',
 ]
-ROOT_URLCONF = 'sociome_portal.urls'
+ROOT_URLCONF = 'itmdatacommons.urls'
 
 TEMPLATES = [
     {
@@ -75,7 +75,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'sociome_portal.wsgi.application'
+WSGI_APPLICATION = 'itmdatacommons.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
@@ -123,12 +123,12 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-PROJECT_TITLE = 'Sociome Data Commons'
+PROJECT_TITLE = 'ITM Data Commons'
 
 # List of search indices managed by the portal
 SEARCH_INDEXES = {
-    'sociome': {
-        'name': 'Sociome Data Commons',
+    'itmdc': {
+        'name': 'ITM Data Commons',
         'uuid': 'cc847451-34c4-4a40-9e34-ffd0a6dd8c08',
         'facets': [
           {

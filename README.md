@@ -14,7 +14,7 @@ To setup a local development environment:
 * Make sure `http://localhost:8000/complete/globus/` is added to the redirect`
 * create settings/local.py with `SOCIAL_AUTH_GLOBUS_KEY` and `SOCIAL_AUTH_GLOBUS_SECRET` from Globus Developer site
   ```
-  from itmdatacommons.settings.base import *
+  from sociome_portal.settings.base import *
   
   # Your portal credentials for a Globus Auth Flow
   SOCIAL_AUTH_GLOBUS_KEY = ""

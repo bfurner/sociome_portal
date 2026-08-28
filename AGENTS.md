@@ -3,19 +3,19 @@
 ## Project shape
 
 - This is a Django portal built on `django-globus-portal-framework`.
-- Run Django commands through `manage.py`; it defaults to `itmdatacommons.settings.local`.
-- Search routes are defined in [itmdatacommons/urls.py](itmdatacommons/urls.py), and the configured `itmdc` Globus Search index lives in [itmdatacommons/settings/base.py](itmdatacommons/settings/base.py).
+- Run Django commands through `manage.py`; it defaults to `sociome_portal.settings.local`.
+- Search routes are defined in [sociome_portal/urls.py](sociome_portal/urls.py), and the configured `itmdc` Globus Search index lives in [sociome_portal/settings/base.py](sociome_portal/settings/base.py).
 - The root route renders the `itmdc` search-about page; `<index>/data` handles search requests, while framework and social-auth routes are included beneath the same URL configuration.
-- Search result field transforms and Globus links belong in [itmdatacommons/fields.py](itmdatacommons/fields.py).
+- Search result field transforms and Globus links belong in [sociome_portal/fields.py](sociome_portal/fields.py).
 - Field helpers expect the Globus result shape used by the configured index: a record list whose first record contains keys such as `Name`, `Description`, `DataCategory`, and `Weblink`.
-- Framework template overrides are under [itmdatacommons/templates/globus-portal-framework/v2](itmdatacommons/templates/globus-portal-framework/v2); project CSS is under [itmdatacommons/static/custom](itmdatacommons/static/custom).
+- Framework template overrides are under [sociome_portal/templates/globus-portal-framework/v2](sociome_portal/templates/globus-portal-framework/v2); project CSS is under [sociome_portal/static/custom](sociome_portal/static/custom).
 
 ## Development
 
 - Use Python 3.13 or newer, and keep dependencies synchronized with `pyproject.toml` and `uv.lock`.
 - The setup process, including Globus OAuth configuration and local database initialization, is documented in [README.md](README.md).
 - Local settings files are intentionally ignored by Git. Never commit Globus secrets, Django secret keys, or other credentials; use a local settings file or environment-based configuration.
-- `itmdatacommons` is the active Django package: `ROOT_URLCONF`, WSGI/ASGI, settings, and field imports point there. Verify all import paths before changing package names.
+- `sociome_portal` is the active Django package: `ROOT_URLCONF`, WSGI/ASGI, settings, and field imports point there. Verify all import paths before changing package names.
 
 ## Validation
 
